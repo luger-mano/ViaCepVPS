@@ -11,8 +11,16 @@
       "RelativeMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|solutionrelative:controllers\\cepcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|c:\\users\\lucas germano\\documents\\projects\\gitprojects\\viacepvps\\viacepintegracao\\refit\\iviaceprefit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|solutionrelative:refit\\iviaceprefit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|c:\\users\\lucas germano\\documents\\projects\\gitprojects\\viacepvps\\viacepintegracao\\models\\historico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|solutionrelative:models\\historico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|c:\\users\\lucas germano\\documents\\projects\\gitprojects\\viacepvps\\viacepintegracao\\interfaces\\ihistorico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|solutionrelative:interfaces\\ihistorico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|c:\\users\\lucas germano\\documents\\projects\\gitprojects\\viacepvps\\viacepintegracao\\controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|solutionrelative:controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B412FD80-AD62-6120-8CEE-39ADEBA6CB65}|ViaCepIntegracao.csproj|c:\\users\\lucas germano\\documents\\projects\\gitprojects\\viacepvps\\viacepintegracao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,19 +34,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IViaCepRefit.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Refit\\IViaCepRefit.cs",
-              "RelativeDocumentMoniker": "Refit\\IViaCepRefit.cs",
-              "ToolTip": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Refit\\IViaCepRefit.cs",
-              "RelativeToolTip": "Refit\\IViaCepRefit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "HealthCheckController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Controllers\\HealthCheckController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HealthCheckController.cs",
+              "ToolTip": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Controllers\\HealthCheckController.cs",
+              "RelativeToolTip": "Controllers\\HealthCheckController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T00:21:06.929Z"
+              "WhenOpened": "2025-08-27T17:29:00.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IHistorico.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Interfaces\\IHistorico.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IHistorico.cs",
+              "ToolTip": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Interfaces\\IHistorico.cs",
+              "RelativeToolTip": "Interfaces\\IHistorico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T03:16:43.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Historico.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Models\\Historico.cs",
+              "RelativeDocumentMoniker": "Models\\Historico.cs",
+              "ToolTip": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Models\\Historico.cs",
+              "RelativeToolTip": "Models\\Historico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:44:06.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,9 +83,10 @@
               "RelativeDocumentMoniker": "Controllers\\CepController.cs",
               "ToolTip": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Controllers\\CepController.cs",
               "RelativeToolTip": "Controllers\\CepController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAcwB0AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwCIAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T23:43:03.642Z"
+              "WhenOpened": "2025-08-26T23:43:03.642Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,20 +96,20 @@
               "RelativeDocumentMoniker": "Services\\ViaCepService.cs",
               "ToolTip": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Services\\ViaCepService.cs",
               "RelativeToolTip": "Services\\ViaCepService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAiwBoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T23:16:48.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Lucas Germano\\Documents\\Projects\\GitProjects\\ViaCepVPS\\ViaCepIntegracao\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAIwA8AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T22:27:14.574Z"
             }

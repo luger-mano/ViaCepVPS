@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using Microsoft.Extensions.Caching.Memory;
-using Refit;
+﻿using Microsoft.Extensions.Caching.Memory;
 using System.Net;
 using ViaCepIntegracao.Exceptions;
 using ViaCepIntegracao.Interfaces;
 using ViaCepIntegracao.Models;
-using ViaCepIntegracao.Refit;
 
 namespace ViaCepIntegracao.Services
 {
@@ -23,11 +20,29 @@ namespace ViaCepIntegracao.Services
             _cache = cache;
         }
 
+        /// <summary>
+        /// Retorna uma "chave" para que seja utilizada no cache como identificação e
+        /// formata a string para caixa alta e baixa.
+        /// </summary>
+        /// <param name="uf"></param>
+        /// <param name="cidade"></param>
+        /// <param name="logradouro"></param>
+        /// <returns>Retorna a string com os parametros formatados.</returns>
         private string ChaveString(string uf, string cidade, string logradouro)
         {
             return $"{uf.ToUpperInvariant()}{cidade.ToLowerInvariant()}{logradouro.ToLowerInvariant()}";
         }
 
+        /// <summary>
+        /// Primeiro verifica se há um cache em memória buscando pela "chave" e retorna o valor caso true, se não
+        /// Faz a conectividade com a API através do caminho URI, se obter sucesso continua, se não, retorna uma lista vazia.
+        /// Insere em uma lista a reposta de um Json desserializado, se não, retorna uma lista vazia.
+        /// Setta no cache os valores da "chave", a lista Json e o tempo que o cache ficará disponível (10 minutos).
+        /// </summary>
+        /// <param name="uf">Busca endereço através do uf como filtro.</param>
+        /// <param name="cidade">Busca endereço através da cidade como filtro.</param>
+        /// <param name="logradouro">Busca endereço através do logradouro como filtro.</param>
+        /// <returns>Retorna a lista do Json desserializado com o resultado da consulta através dos parametros.</returns>
         public async Task<List<ViaCepModel>> ObterEnderecoPorUfCidadeLogradouroAsync(string uf, string cidade, string logradouro)
         {
             HttpResponseMessage response;
@@ -38,6 +53,7 @@ namespace ViaCepIntegracao.Services
 
             if (_cache.TryGetValue<List<ViaCepModel>>(chave, out var valor))
             {
+                _log.LogInformation("Pegou do cache");
                 return valor;
             }
             try

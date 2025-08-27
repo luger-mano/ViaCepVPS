@@ -1,6 +1,8 @@
+using Polly;
+using Polly.Extensions.Http;
 using Refit;
 using ViaCepIntegracao.Interfaces;
-using ViaCepIntegracao.Refit;
+using ViaCepIntegracao.Models;
 using ViaCepIntegracao.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,11 +18,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache();
 
 builder.Services.AddScoped<IViaCepService, ViaCepService>();
+builder.Services.AddSingleton<IHistorico, Historico>();
 
 builder.Services.AddHttpClient<IViaCepService, ViaCepService>(client =>
 {
     client.BaseAddress = new Uri("https://viacep.com.br");
-});
+}).AddPolicyHandler(GetRetryPolicy());
 
 builder.Services.AddCors(options =>
 {
@@ -33,6 +36,8 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -42,7 +47,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+        .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+}
+
 app.UseCors("AllowAll");
+
+app.UseHealthChecks("/health");
 
 app.UseHttpsRedirection();
 
