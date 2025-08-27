@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "ViaCepIntegracao.Controllers.CepController",
+    "Method": "BuscarEndereco",
+    "RelativePath": "api/endereco/{uf}/{cidade}/{logradouro}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uf",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "cidade",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "logradouro",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ViaCepIntegracao.Models.ViaCepModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
