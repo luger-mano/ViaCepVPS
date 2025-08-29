@@ -34,7 +34,7 @@ Cliente → Controller → Service → HttpClient → ViaCEP
 
 ## 🧰 Requisitos
 
-- [.NET SDK 7.0+](https://dotnet.microsoft.com/download) (recomendado 8.0)
+- [.NET SDK 8.0+](https://dotnet.microsoft.com/download) (recomendado 9.0)
 - Acesso à internet para consultar o ViaCEP
 
 ---
@@ -148,31 +148,6 @@ curl http://localhost:5000/api/endereco/SPA/S/Pa
 - **Retry** com [Polly](https://github.com/App-vNext/Polly)
 - **Cache** de respostas (IMemoryCache) para reduzir chamadas ao ViaCEP
 - **Log** (ILogger)
-
-> Inclua conforme a necessidade do seu projeto.
-
----
-
-## 🧷 Dicas de Validação de CEP
-
-- Remover caracteres não numéricos: `Regex.Replace(cep, "[^0-9]", "")`
-- Verificar tamanho: exatamente **8 dígitos**
-- Tratar CEP inexistente: ViaCEP retorna `{ "erro": true }` para CEPs não encontrados — converta isso em `404 Not Found`.
-
----
-
-## 🛡️ Tratamento de Erros (sugestão de middleware)
-
-```csharp
-app.UseExceptionHandler(errorApp =>
-{
-    errorApp.Run(async context =>
-    {
-        // mapear exceções conhecidas para 400/404/503, etc.
-        // retornar ProblemDetails ou payload padrão
-    });
-});
-```
 
 ---
 
